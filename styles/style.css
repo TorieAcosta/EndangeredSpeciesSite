@@ -1,0 +1,167 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+/* the styles for the elements------------------------------------ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Optima, sans-serif;
+    width: auto;
+    margin: 0 auto;
+    background-color: #001f14;
+    
+}
+
+/* div to make responsive */
+#main {
+   
+    width: 75%;
+    margin: 0 auto;
+}
+/* the styles for the header --------------------------------------*/
+header {
+    background-color: #000c09;
+    height: 100px;
+}
+/*Title of Site*/
+header h1{
+    color: white;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 0px 10px 0 18px;
+    margin: 0 auto;
+    line-height: 100px;
+    float: left;
+    letter-spacing: 3px;
+}
+/* the styles for the navigation bar-------------------------------*/ 
+nav{
+    line-height: 100px;
+    z-index: 9999;
+}
+/*navigation list*/ 
+nav ul {
+    float: right;
+    padding-bottom: 10px;
+}
+/* horizontial position of page links*/ 
+nav li{
+    display: inline-block;
+    padding-right: 1em;
+    margin: 0 0 5px 0;
+}
+/*nav text*/ 
+nav a{
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+   
+}
+nav a.current { 
+    color: yellowgreen; 
+}
+nav a:hover {
+    background-color:#4d6a51; 
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 1200px){
+    .checkbtn{
+        display: block;
+    }
+     ul {
+        position: fixed;
+        width: 100%;
+        height: 800px;
+        background-color: #000c09;
+        top: 80px;
+        left: 100%;
+        /* -100% if want it to come from left*/
+        text-align: center;
+        transition: all .5s;
+        z-index: 9999;
+    }
+    nav ul li{
+        display: block;
+        z-index: 9999;
+    }
+    nav ul li a{
+        font-size: 40px;
+    }
+    a:hover, a.current{
+        background: none;
+       
+    }
+    #check:checked ~  ul{
+        left: 0;
+    }
+
+}
+
+/* the styles for the section ------------------------------------*/
+section{
+    padding: 30px 20px 50px 20px;
+    max-width: 800px;
+    float: left;
+    
+}
+section h1{
+    font-size: 300%;
+    padding-bottom: 1em;
+    color: white;
+    letter-spacing: 3px;
+}
+section p{
+    line-height: 30px;
+    text-indent: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 1em;
+    font-size: 140%;
+    color: white;
+}
+/* the styles for the aside ----------------------------------------*/
+aside {
+    margin-top: 110px;
+    width: 215px;
+    float: left;
+    padding: 30px 20px 20px 20px;
+}
+
+.image-swap img:nth-child(1){
+   position: absolute;
+  width: 325px;
+}
+.image-swap img:nth-child(1):hover{
+    opacity: 0;
+}
+.image-swap img:nth-child(2){
+  width: 325px;
+}
+
+
+/* the style for the footer---------------------------------------*/
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    color: beige;
+    background-color: #000c09;
+    
+}
